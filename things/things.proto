@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package things;
+
+option go_package = "things";
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+
+service Things {
+  rpc Get(Thing) returns (Thing) {
+    option (google.api.http) = {
+      get: "/v1/things/{id}"
+    };
+  }
+}
+
+message Thing {
+  uint64 id   = 1;
+  string name = 2;
+}
