@@ -19,4 +19,5 @@ service Things {
 message Thing {
   uint64 id   = 1;
   string name = 2;
+  string desc = 3;
 }
