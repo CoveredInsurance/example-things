@@ -1,0 +1,23 @@
+{
+  "name": "example-things",
+  "version": "1.0.0",
+  "description": "Example Things ====",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoveredInsurance/example-things.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/CoveredInsurance/example-things/issues"
+  },
+  "homepage": "https://github.com/CoveredInsurance/example-things#readme",
+  "dependencies": {
+    "google-protobuf": "^3.5.0",
+    "grpc": "^1.10.1"
+  }
+}
