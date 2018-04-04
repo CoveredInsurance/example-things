@@ -18,5 +18,5 @@ server.addService(ThingsService, {
   get: get
 });
 
-server.bind('0.0.0.0:0', grpc.ServerCredentials.createInsecure());
+server.bind('0.0.0.0:23478', grpc.ServerCredentials.createInsecure());
 server.start();
