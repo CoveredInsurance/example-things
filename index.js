@@ -5,8 +5,26 @@ const _ = require('lodash');
 const { ThingsService } = require('./js/things_grpc_pb.js');
 const { Thing } = require('./js/things_pb.js');
 
+let things = [
+  {
+    id: 1,
+    name: 'Test Thing'
+  },
+  {
+    id: 2,
+    name: 'Test Thing2'
+  }
+];
+
 let get = (call, done) => {
-  return done(null, call.request);
+  let thing = call.request;
+  let id = thing.getId();
+  things.forEach((thingy) => {
+    if (thingy.id === id) {
+      thing.setName(thingy.name);
+      return done(null, thing);
+    }
+  })
 };
 
 // createServer creates a new grpc Server with EDI endpoint handlers
