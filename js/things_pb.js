@@ -62,8 +62,7 @@ proto.things.Thing.prototype.toObject = function(opt_includeInstance) {
 proto.things.Thing.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    desc: jspb.Message.getFieldWithDefault(msg, 3, "")
+    name: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -108,10 +107,6 @@ proto.things.Thing.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {string} */ (reader.readString());
       msg.setName(value);
       break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setDesc(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -155,13 +150,6 @@ proto.things.Thing.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getDesc();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
 };
 
 
@@ -192,21 +180,6 @@ proto.things.Thing.prototype.getName = function() {
 /** @param {string} value */
 proto.things.Thing.prototype.setName = function(value) {
   jspb.Message.setField(this, 2, value);
-};
-
-
-/**
- * optional string desc = 3;
- * @return {string}
- */
-proto.things.Thing.prototype.getDesc = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/** @param {string} value */
-proto.things.Thing.prototype.setDesc = function(value) {
-  jspb.Message.setField(this, 3, value);
 };
 
 
