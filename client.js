@@ -7,6 +7,6 @@ const { Thing } = require('./js/things_pb.js');
 
 let client = new ThingsClient('0.0.0.0:23478', grpc.credentials.createInsecure());
 
-client.get(thingRq, (err, res) => {
-  console.log(err, res)
+client.get(new Thing(), (err, res) => {
+  console.log(err, res);
 });

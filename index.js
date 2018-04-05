@@ -5,7 +5,9 @@ const grpc = require('grpc');
 const { ThingsService } = require('./js/things_grpc_pb.js');
 const { Thing } = require('./js/things_pb.js');
 
-let get = (call, done) => {};
+let get = (call, done) => {
+  return done(null, call.request);
+};
 
 // createServer creates a new grpc Server with EDI endpoint handlers
 let server = new grpc.Server();
