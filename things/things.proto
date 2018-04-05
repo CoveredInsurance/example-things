@@ -14,7 +14,6 @@ service Things {
       get: "/v1/things/{id}"
     };
   }
-  rpc Post(Thing) returns (Thing) {}
 }
 
 message Thing {
