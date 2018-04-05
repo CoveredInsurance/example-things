@@ -30,6 +30,17 @@ var ThingsService = exports.ThingsService = {
     responseSerialize: serialize_things_Thing,
     responseDeserialize: deserialize_things_Thing,
   },
+  post: {
+    path: '/things.Things/Post',
+    requestStream: false,
+    responseStream: false,
+    requestType: things_pb.Thing,
+    responseType: things_pb.Thing,
+    requestSerialize: serialize_things_Thing,
+    requestDeserialize: deserialize_things_Thing,
+    responseSerialize: serialize_things_Thing,
+    responseDeserialize: deserialize_things_Thing,
+  },
 };
 
 exports.ThingsClient = grpc.makeGenericClientConstructor(ThingsService);
