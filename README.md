@@ -19,6 +19,9 @@ protoc \
 
 ### Compiling Java
 
+
+Using [protoc](https://developers.google.com/protocol-buffers/docs/javatutorial#compiling-your-protocol-buffers):
+
 ```sh
 protoc \
     -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
@@ -26,3 +29,8 @@ protoc \
     --java_out=./java \
     ./things/*.proto
 ```
+
+Using Gradle, see:
+
+* https://grpc.io/docs/quickstart/java.html
+* https://github.com/google/protobuf-gradle-plugin
