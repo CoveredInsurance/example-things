@@ -2,10 +2,9 @@ syntax = "proto3";
 
 package things;
 
-option go_package = "things";
+option java_package = "com.itscovered.things";
 
 import "google/api/annotations.proto";
-import "google/protobuf/empty.proto";
 
 
 service Things {
@@ -17,6 +16,7 @@ service Things {
   rpc Post(Thing) returns (Thing) {}
 }
 
+// Thing
 message Thing {
   uint64 id   = 1;
   string name = 2;
