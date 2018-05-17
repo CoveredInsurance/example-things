@@ -20,6 +20,14 @@ resources:
 #     uri: https://github.com/grpc/grpc-go.git
 
 jobs:
+- name: unit-tests
+  serial: true
+  plan:
+  - get: things-source
+    trigger: true
+  - task: run-unit-tests
+    file: things-source/tasks/unit-tests.yml
+
 - name: build-js
   serial: true
   plan:
