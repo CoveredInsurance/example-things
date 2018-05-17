@@ -4,7 +4,6 @@
 var grpc = require('grpc');
 var things_pb = require(require("path").join(__dirname, './things_pb.js'));
 var google_api_annotations_pb = require(require("path").join(__dirname, './google/api/annotations_pb.js'));
-var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 
 function serialize_things_Thing(arg) {
   if (!(arg instanceof things_pb.Thing)) {

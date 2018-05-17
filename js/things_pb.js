@@ -12,7 +12,6 @@ var goog = jspb;
 var global = Function('return this')();
 
 var google_api_annotations_pb = require(require("path").join(__dirname, './google/api/annotations_pb.js'));
-var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 goog.exportSymbol('proto.things.Thing', null, global);
 
 /**
