@@ -11,4 +11,5 @@ inputs:
 - name: things-source
 
 run:
-  path: things-source/tasks/run-unit-tests
+  path: bash
+  args: [./tasks/run-unit-tests.sh]
