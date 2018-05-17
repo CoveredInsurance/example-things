@@ -34,6 +34,8 @@ jobs:
   - aggregate:
     - get: things-source
       trigger: true
+      passed:
+        - unit-tests
     - get: grpc-gateway
   - task: compile
     config:
