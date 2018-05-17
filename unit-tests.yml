@@ -12,4 +12,4 @@ inputs:
 
 run:
   path: bash
-  args: [./tasks/run-unit-tests.sh]
+  args: [things-source/tasks/run-unit-tests.sh]
