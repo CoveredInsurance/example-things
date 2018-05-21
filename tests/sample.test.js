@@ -6,7 +6,7 @@ describe('Sample test describe block', function() {
   });
 
   it('should test', done => {
-    expect(true).to.be.true;
+    expect(true).to.be.false;
     done();
   })
 })
